@@ -1,7 +1,25 @@
-# JH private repo for JH server
-This repo is used for the Dev fo
-
-
+# JH Server 
 The Jump Host (bastion server) is a server with the purpose of offering security to the internal network, agility in the connection to a large inventory of servers, complete management of connection logs, oriented to agile teams (squads), segmentation by permissions , share inventories with different teams, etc.
 
-El Jump Host (servidor bastión) es un server con el fin de ofrecer seguridad a la red interna, agilidad en la conexion a un gran inventario de servers, gestión completa de logs de conexión, orientado a equipos ágiles (squads), segmentción por permisos, compartir inventarios con diferentes equipos, etc.
+- Prerequisites:
+  - RHEL installed and updated.
+  - RHEL with a valid subscription.
+  - Network conectivity in order to be able to install with *yum* or *dnf*
+  - Network conectivity in order to be able to install python packages with *pip3* 
+  - Got a VG called "datavg" with at least XX GB
+  - 
+  
+- Preinstall Steps
+  - Create a dir for the install "/tmp/jh"
+  - Copy files to "/tmp/jh" 
+```     JH-Server-Install.sh
+        JH-install-prerequisites.sh
+        JHServerFiles.tar.gz
+        JH-environment.xml
+``` 
+- Preinstall Steps _(execute as root)_
+``` 
+        cd /tmp/jh
+        ./JH-install-prerequisites.sh
+        ./JH-Server-Install.sh
+``` 
